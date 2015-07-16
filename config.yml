@@ -1,0 +1,105 @@
+# 
+# GENERAL
+Crates:
+  Crate:
+    ParticleEffect:
+      enabled: true
+      particle: WATER_WAKE
+      onlywhenopening: true
+    Key:
+      name: '&5[Crate Key]'
+      lore:
+      - '&eUse this key to unlock a crate!'
+      - '&aJust &6right-click&a a crate to open it!'
+      enchanted: true
+      material: '388'
+    Items:
+      NOTHING:
+        chance: 100
+        name: '&a Nothing'
+        material: 7
+        commands:
+        - whisper %player% UNLUCKY! You got Nothing!
+        enchanted: true
+
+      KBUnlock:
+        chance: 1
+        name: '&aKit Battle Unlock Token'
+        material: 399
+        commands:
+        - whisper %player% Congrats, you have been rewarded &l1 KB Unlock Token
+        - kb Kitunlocker give %player% 1
+        enchanted: true
+
+      Money1000:
+        chance: 1
+        name: '&a$1000'
+        material: 402
+        commands:
+        - whisper %player% Congrats, you have been rewarded &l$1000
+        - eco give %player% 1000
+        enchanted: true
+
+      Money5000:
+        chance: 1
+        name: '&a$5000'
+        material: 402
+        commands:
+        - whisper %player% Congrats, you have been rewarded &l$5000
+        - eco give %player% 1000
+        enchanted: true
+
+      Money10000:
+        chance: 1
+        name: '&a$10000'
+        material: 402
+        commands:
+        - whisper %player% Congrats, you have been rewarded &l$10000
+        - eco give %player% 10000
+        enchanted: true
+#=========================================================================
+MagicBox:
+    ParticleEffect:
+      enabled: true
+      particle: WATER_WAKE
+      onlywhenopening: true
+    Key:
+      name: '&5[MagicBox Key]'
+      lore:
+      - &l&1Right click a MagicBox to get a Item
+      enchanted: true
+      material: '388'
+    Items:
+      NOTHING:
+        chance: 100
+        name: '&aNothing'
+        material: 7
+        commands:
+        - whisper %player% UNLUCKY! You got Nothing!
+        enchanted: true
+      DiamondSword:
+        chance: 1
+        name: '&aDiamondSword'
+        material: 276
+        commands:
+        - whisper %player% You have been given a DiamondSword
+        enchanted: true
+#=========================================================================
+    PrizeItem:
+      material: redstonetorch
+      name: '&aPrize'
+      enchanted: true
+    Sound:
+      movingSound: WOOD_CLICK
+      prizeSound: BAT_TAKEOFF
+      closeInventorySound: CHEST_CLOSE
+    PreCommands:
+    - msg %player% &e&lYou are now opening a %crate% Crate!
+    BlockType: ENDER_CHEST
+    LeftClickInv:
+      enablechancelore: true
+      lore:
+      - '&7Chance: &a&l%chance%%'
+      name: '&cItems for %crate%'
+    OpenInv:
+      name: '&cOpening %crate%'
