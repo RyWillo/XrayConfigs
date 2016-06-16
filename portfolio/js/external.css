@@ -1,0 +1,5 @@
+var causeRepaintsOn = $('.score-text');
+
+$(window).resize(function () {
+    causeRepaintsOn.css("z-index;
+});
